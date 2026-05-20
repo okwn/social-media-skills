@@ -75,6 +75,26 @@ These rules apply to every skill in the repo:
 - Skill names read as verb-object or noun phrases describing the output (`post-writer`, not `writing-posts`)
 - Keep names short. Three words max where possible.
 
+## validate-skills.sh reference
+
+This script runs validation checks on every skill in `skills/`. Run it before opening a PR:
+
+```bash
+./validate-skills.sh
+```
+
+Checks include:
+- SKILL.md exists and starts with YAML frontmatter (`---`)
+- `name` field in frontmatter matches the folder name
+- `name` field is ≤ 64 characters
+- `description` field is present and ≤ 1024 characters
+- `description` contains trigger phrasing (words like "use" or "when")
+- Folder name follows `lowercase-alphanumeric-with-hyphens` format
+- SKILL.md is ≤ 500 lines (warn if exceeded)
+- Optional `references/`, `scripts/`, `assets/` subfolders present
+
+Exit codes: `0` = all pass, `1` = one or more failures.
+
 ## Testing locally
 
 Copy your skill into Claude's skill directory:
@@ -92,7 +112,19 @@ Then trigger it in a new Claude conversation with the phrases listed in the desc
 
 ## Submitting a PR
 
-- Title: `feat: add [skill-name]` or `fix: [skill-name] [brief description]`
+Before opening a PR, complete this checklist:
+
+- [ ] New skills follow the naming conventions above
+- [ ] SKILL.md has YAML frontmatter with `name` and `description` fields
+- [ ] `description` includes trigger phrases users would say
+- [ ] Skill body follows the standard structure (Auto-start, Gather inputs, Main work, Output, Rules)
+- [ ] `validate-skills.sh` passes with no failures
+- [ ] No British English spelling errors
+- [ ] No banned words used ("leverage", "deep dive", "unlock", "game-changer", "groundbreaking")
+- [ ] Skill tested locally in a Claude conversation
+- [ ] PR title follows `feat: add [skill-name]` or `fix: [skill-name] [brief description]` format
+
+PR title: `feat: add [skill-name]` or `fix: [skill-name] [brief description]`
 - Body: describe what changed and why, include sample input/output if relevant
 - Link any related issue
 
