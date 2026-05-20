@@ -114,7 +114,7 @@ Constraints:
 
 Tell the user:
 
-> Paste this into a new Gemini chat, attach your reference photo, enable Create Image, and select Nano Banana. Generate at 1280x720.
+> Paste this into a new Gemini chat, attach your reference photo, and enable Create Image. Generate at 1280x720.
 
 ## Step 5. Offer the next move
 

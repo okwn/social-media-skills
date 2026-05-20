@@ -61,7 +61,7 @@ Always include the handwritten text "Follow [Name] [Tagline] for more helpful co
 
 Tell the user:
 
-> Paste this into a new Gemini chat with Create Image enabled and Nano Banana selected. Generate at 1080x1350.
+> Paste this into a new Gemini chat with Create Image enabled. Generate at 1080x1350.
 
 ## Step 4. Offer iteration
 

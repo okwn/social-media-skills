@@ -64,7 +64,7 @@ Drive the browser through these actions in order. Verify publish dates on every 
 
 ### 2c. Google web search
 
-Run these searches one by one, open the top results, verify publish dates.
+Run these searches one by one, open the top results, verify publish dates. Append `&tbs=qdr:w` to the Google search URL to enforce the past-week filter programmatically (e.g., `https://www.google.com/search?q=%5Bniche%5D+news&tbs=qdr:w`). If the browser extension strips URL parameters, fall back to manual filter setting.
 
 - `[niche] news` (set Tools → Any time → Past week)
 - `[niche] launch` (past week)
