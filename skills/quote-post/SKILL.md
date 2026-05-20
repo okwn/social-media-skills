@@ -93,7 +93,7 @@ The quote must be perfectly spelled and punctuated exactly as written above.
 
 Tell the user:
 
-> Paste this into a new Gemini chat with the reference image attached. Create Image mode, Nano Banana model, 1080x1350 output.
+> Paste this into a new Gemini chat with the reference image attached and Create Image enabled.
 
 ## Step 5. Honest expectation-setting
 

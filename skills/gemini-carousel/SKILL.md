@@ -101,7 +101,7 @@ Constraints:
 
 Tell the user:
 
-> Paste each prompt into a new Gemini chat with Create Image enabled and Nano Banana selected. Generate slides one at a time for maximum control over consistency.
+> Paste each prompt into a new Gemini chat with Create Image enabled and select the image generation model available in your session. Generate slides one at a time for maximum control over consistency.
 
 ## Step 4. Offer one-shot alternative
 
