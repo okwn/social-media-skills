@@ -1,0 +1,27 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate skills
+        run: |
+          for skill in skills/*/; do
+            if [[ ! -f "${skill}SKILL.md" ]]; then
+              echo "ERROR: ${skill}SKILL.md missing"
+              exit 1
+            fi
+          done
+          echo "All skills have SKILL.md files"
+
+      - name: Run validation script
+        run: ./validate-skills.sh
