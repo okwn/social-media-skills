@@ -12,9 +12,9 @@ When this skill triggers, go straight to Step 1. Do not summarise. Start input g
 
 ## Step 1. Gather inputs
 
-Check the project for about-me.md. If it exists, read it and pre-fill the description of who the user is. Skip that question and tell the user what you pulled.
+Check the project for about-me.md and voice.md. If both exist, read them and pre-fill the description of who the user is and the tone to use. Skip the identity question and tell the user what you pulled.
 
-If about-me.md is missing, ask:
+If either file is missing, ask:
 
 > Give me at least two paragraphs describing who you are, what you do, and what you like to discuss. The more specific you are, the more relevant the ideas.
 
@@ -39,7 +39,7 @@ Then call AskUserQuestion:
 
 If the user types their own, accept 3 to 5 pillars. If fewer than 3, ask for more.
 
-If the user picks "Suggest them for me", read about-me.md, propose 4 pillars covering their positioning, and ask them to confirm or edit before continuing.
+If the user picks "Suggest them for me", read about-me.md and voice.md, propose 4 pillars covering their positioning, and ask them to confirm or edit before continuing. Tune the language to match the tone from voice.md.
 
 ## Step 2. Build the matrix
 
